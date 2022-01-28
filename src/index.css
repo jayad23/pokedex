@@ -1,10 +1,16 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap');
+@import url('./Styles/ContainerImgCards.css');
+@import url('./Styles/Home.css');
+@import url('./Styles/Loader.css');
+@import url('./Styles/Login.css');
+@import url('./Styles/PokemonList.css');
+@import url('./Styles/SingleOutPokemon.css');
+
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 code {
