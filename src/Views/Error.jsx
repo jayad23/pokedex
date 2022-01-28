@@ -6,7 +6,7 @@ export const Error = () => {
     <div className='container-home'>
         <div className='container-error'>
             <h2>You sure you got the name right?</h2>
-            <button onClick={()=> navigate('/pokedex')}>Back to Home View</button>
+            <h1 onClick={()=> navigate('/pokedex')}>Back to Home View</h1>
         </div>
     </div>
   )
