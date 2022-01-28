@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router';
 
 
 import { FloatingCards } from '../components/FloatingCards';
 import { Loader } from '../components/Loader';
-import { FilterSelector } from '../redux/Actions/Actions'
+import { FilterSelector, SearchAction } from '../redux/Actions/Actions'
 
 export const Home = () => {
 
   const dispatch = useDispatch()
-
+  const [ search, setSearch ] = useState('')
   const userInfo = useSelector( store => store.rootReducer.infoUser)
   const InitialData = useSelector( store => store.rootReducer.initialData)
   const navigate = useNavigate()
@@ -20,12 +20,24 @@ export const Home = () => {
       navigate(`/pokedex/type/${param}`)
   }
 
+  const handlerSearch = ( e ) =>{
+    e.preventDefault()
+    const refactored = search.trim().toLocaleLowerCase()
+
+    if( InitialData.find( pokemon => pokemon.name === refactored) !== undefined ){
+      dispatch( SearchAction(refactored) )
+      navigate(`/pokedex/pokemon/${refactored}`)
+    }else{
+      navigate('/pokedex/error')
+    }
+  }
+
   return (
 
     <div className='container-home'>
 
-        <form>
-              <input type="text" />
+        <form onSubmit={(e)=> handlerSearch(e)}>
+              <input type="text" onChange={(e)=> setSearch(e.target.value)}/>
              <button type='submit'><i className="fab fa-searchengin"></i></button>
         </form>
 

@@ -5,6 +5,7 @@
 @import url('./Styles/Login.css');
 @import url('./Styles/PokemonList.css');
 @import url('./Styles/SingleOutPokemon.css');
+@import url('./Styles/Error.css');
 
 
 *{

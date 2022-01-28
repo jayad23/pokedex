@@ -32,7 +32,7 @@ export const SingledOutPokemon = ()=>{
 
             setToggleThree(true)
 
-        }else if(param == 4){
+        }else if(param === 4){
 
             setToggleFour(true)
 

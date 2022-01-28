@@ -6,6 +6,7 @@ import { Home } from './Views/Home'
 import { PokemonTypeSelected } from './Views/PokemonTypeSelected'
 import {FetchComponent} from "./FETCH-COMPONENT/FetchComponent"
 import { SingledOutPokemon } from "./Views/SingleOutPokemon";
+import { Error } from './Views/Error'
 
 function App() {
 
@@ -28,7 +29,7 @@ function App() {
               <Route path="/pokedex" element={ <Home /> }/>
               <Route path="/pokedex/type/:type" element={ <PokemonTypeSelected /> }/>
               <Route path="/pokedex/pokemon/:name" element={ <SingledOutPokemon /> }/>
-
+              <Route path="/pokedex/error" element={ <Error /> }/>
           </Route>
 
 

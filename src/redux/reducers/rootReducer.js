@@ -30,8 +30,6 @@ export const rootReducer = ( state = initialState, action )=>{
             }
 
         case Types.Filter:
-           
-
             return {
                 ...state,
                  dataFiltered: state.initialData.filter(item => 
@@ -51,6 +49,12 @@ export const rootReducer = ( state = initialState, action )=>{
                 singlePoke: state.initialData.filter( pokemon => pokemon.id === action.payload) 
             }
 
+        case Types.Search:
+            return {
+                ...state,
+                singlePoke: state.initialData.filter( pokemon => pokemon.name === action.payload )
+            }
+            
         default:
             return state;
     }

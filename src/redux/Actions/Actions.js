@@ -44,3 +44,10 @@ export const SingleOut = ( id )=>{
         payload: id
     }
 }
+
+export const SearchAction = ( input ) =>{
+    return {
+        type: Types.Search,
+        payload: input
+    }
+}
