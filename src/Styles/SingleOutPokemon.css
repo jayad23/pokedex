@@ -209,7 +209,8 @@
         width: 40%;
         position: relative;
         height: 99.5vh;
-        border-radius: 0 0 50rem 50rem;    
+        border-radius: 0 0 50rem 50rem;
+        overflow: hidden;    
     }
 
     .container-single-poke>header>.header-text>span{
@@ -226,11 +227,10 @@
 
     .container-single-poke>header>.pokeball{
         width: 450px;
+        height: 99.5vh;
         position: absolute;
-        top: 55%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        bottom: 10px;
+        top: 650px;
     }
     
     .single-type>h3{
@@ -260,7 +260,7 @@
         
     }
 
-    .container-sprites>img{
+    #sprites-single>img{
         width: 130px;
         height: 130px;
         box-shadow: 2px 2px 20px black;
@@ -282,13 +282,21 @@
     .container-poke-effect{
         display: flex;
         position: absolute;
-        top: -8px;
+        top: -64px;
         gap: 24px;
     }
 
-    .container-poke-effect>img{
-        width: 146px;
+    #special-pokeballs{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #special-pokeballs>img{
+        width: 147px;
         cursor: pointer;
+        margin: -8.3px;
     }
 
     .container-poke-effect>.fade{

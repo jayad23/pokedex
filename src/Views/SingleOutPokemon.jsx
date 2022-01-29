@@ -69,11 +69,13 @@ export const SingledOutPokemon = ()=>{
                </article>
 
                 <article className="container-sprites">  
-                    <img src={pokemon?.sprites?.front_shiny} alt="" />
-                    <img src={pokemon?.sprites?.back_shiny} alt="" />
-                    <img src={pokemon?.sprites?.front_default} alt="" />
-                    <img src={pokemon?.sprites?.back_default} alt="" />
-                    <div className="container-poke-effect">
+                    <div className="container-poke-effect" id="sprites-single">
+                        <img src={pokemon?.sprites?.front_shiny} alt="" />
+                        <img src={pokemon?.sprites?.back_shiny} alt="" />
+                        <img src={pokemon?.sprites?.front_default} alt="" />
+                        <img src={pokemon?.sprites?.back_default} alt="" />
+                    </div>
+                    <div className="container-poke-effect" id="special-pokeballs">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/640px-Pok%C3%A9_Ball_icon.svg.png" onClick={()=>settingsToggle(1)} className={toggleOne ? "fade" : null} alt="" />
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/640px-Pok%C3%A9_Ball_icon.svg.png" onClick={()=>settingsToggle(2)} className={toggleTwo ? "fade" : null} alt="" />
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/640px-Pok%C3%A9_Ball_icon.svg.png" onClick={()=>settingsToggle(3)} className={toggleThree ? "fade" : null} alt="" />
